@@ -1,1 +1,1 @@
-document.write('统计代码')
+document.write('')

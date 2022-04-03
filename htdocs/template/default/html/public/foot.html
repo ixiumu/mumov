@@ -1,0 +1,66 @@
+<footer id="footer" class="wrapper">
+	<p class="sitemap"><img src="{$maccms.path_tpl}static/images/icon.png" height="10">
+		<a target="_blank" href="{:mac_url('label/about')}">介绍</a><span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('label/web')}">最新网址</a><span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('label/help')}">投屏</a><span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('map/index')}">MAP</a><!-- <span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('rss/index')}">RSS</a><span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('rss/baidu')}">Baidu</a><span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('rss/google')}">Google</a><span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('rss/bing')}">Bing</a><span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('rss/so')}">so</a><span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('rss/sogou')}">Sogou</a><span class="space-line-bold"></span>
+		<a target="_blank" href="{:mac_url('rss/sm')}">SM</a> -->
+	</p>
+	<p>本站所有内容均来自互联网分享站点所提供的公开引用资源，未提供影视资源上传、存储服务。</p>
+	<p class="none">{$maccms.site_tj}</p>
+</footer>
+
+
+
+<div class="fixed_right_bar">
+	<div style="margin-top:3px;cursor: pointer;" id="clothes" onclick="clothesChange();">
+		<img src="{$maccms.path_tpl}static/images/clothes.png">
+	</div>
+	{if condition="$GLOBALS['config']['gbook']['status']"}
+	<div>
+	<a href="{:mac_url('gbook/index')}" >
+		<img src="{$maccms.path_tpl}static/images/help.png">
+	</a>
+	</div>
+	{/if}
+	{if condition="$GLOBALS['config']['user']['status']"}
+	<div>
+	<a href="{:mac_url('user/login')}" >
+		<img src="{$maccms.path_tpl}static/images/user.png">
+	</a>
+	</div>
+	{/if}
+	<div class="ant-back-top">
+		<img src="{$maccms.path_tpl}static/images/back.png">
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+$(function(){	
+	$(window).scroll(function() {		
+		if($(window).scrollTop() >= 100){
+			$('.ant-back-top').fadeIn(300); 
+		}else{    
+			$('.ant-back-top').fadeOut(300);    
+		}  
+	});
+	$('.ant-back-top').click(function(){
+	$('html,body').animate({scrollTop: '0px'}, 800);});	
+});
+</script>
+
+{include file="public/tcnotice"} <!-- 弹窗公告-->
+
+   
+{include file="public/website"} <!-- 网址-->
+         
+<div class="shortcuts-mobile-overlay"></div>
+<script src="{$maccms.path_tpl}static/js/mxhtml.js"></script>

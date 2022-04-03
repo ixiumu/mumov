@@ -1,0 +1,44 @@
+<script>var maccms={"path":"__ROOT__","mid":"{$maccms['mid']}","url":"{$maccms['site_url']}","wapurl":"{$maccms['site_wapurl']}","mob_status":"{$maccms['mob_status']}"};</script>
+<link rel="icon" href="{$maccms.path_tpl}static/images/icon.png" type="image/png" />
+<link href="{$maccms.path_tpl}static/css/style.css" rel="stylesheet" type="text/css">
+<link disabled="" class="theme_black" type="text/css" rel="stylesheet" href="{$maccms.path_tpl}static/css/dark.css">
+<script src="{$maccms.path_tpl}static/js/jquery.js"></script>
+<script type="text/javascript"  src="{$maccms.path_tpl}static/js/jquery.lazyload.js"></script>
+<script src="{$maccms.path_tpl}static/js/jquery.autocomplete.js"></script>
+<script src="{$maccms.path_tpl}static/js/jquery.cookie.js"></script>
+<script src="{$maccms.path_tpl}static/js/home.js"></script>
+<script type="text/javascript"  src="{$maccms.path_tpl}static/js/jquery.clipboard.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.js"></script>
+{if condition="$maccms.aid eq 15"}
+<script type="text/javascript">var vod_name='{$obj.vod_name}',vod_url=window.location.href,vod_part='{$obj['vod_play_list'][$param['sid']]['urls'][$param['nid']]['name']}';</script>
+<script type="text/javascript"  src="{$maccms.path_tpl}static/js/history.js"></script>
+ <script type="text/javascript"  src="{$maccms.path_tpl}static/js/jquery.qrcode.min.js"></script>
+ <script type="text/javascript"  src="{$maccms.path_tpl}static/js/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="{$maccms.path_tpl}static/css/swiper-bundle.min.css" type="text/css">
+{/if}
+<script src="{$maccms.path_tpl}static/js/script.js"></script>
+<script>
+	var clothes = $.cookie('clothes');
+	if (clothes == 'white') {
+		$('.theme_black').removeAttr('disabled');
+	}
+</script>
+
+<script>
+	function clothesChange(){
+		var clothes = $.cookie('clothes');
+		if (clothes == 'black') {
+			$.cookie('clothes','white', {expires: 365, path: '/'});  
+			$('.theme_black').each(function(){
+			    $(this).removeAttr('disabled');
+			});
+		} else {
+			$.cookie('clothes','black', {expires: 365, path: '/'});  
+			$('.theme_black').each(function(){
+			    $(this).attr('disabled', '');
+			});
+		}
+		clothes = $.cookie('clothes');
+		console.log(clothes);
+	}
+</script>

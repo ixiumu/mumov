@@ -1,0 +1,25 @@
+<div class="mxone-pannel mxone-pannel-bg clearfix">					
+	<div class="mxone-pannel-box clearfix">
+		<div class="mxone-pannel_hd">
+			<div class="mxone-pannel__head clearfix">
+				<h3 class="title">										
+					热门资讯
+				</h3>													
+			</div>																		
+		</div>
+		<div class="mxone-pannel_bd col-pd">
+			<ul class="mxone-vodlist__text clearfix">				
+				{maccms:art num="20" order="desc" by="hits"}
+				{if condition="$key eq 1"}
+				<li>
+					<a class="w-thumb mxone-vodlist__thumb active lazyload" href="{:mac_url_art_detail($vo)}" title="{$vo.art_name}" data-original="{:mac_url_img($vo.art_pic)}"></a>
+				</li>
+				{/if}
+				<li {if condition="$key gt 1"}class="top-line-dot"{/if}>
+					<a href="{:mac_url_art_detail($vo)}" title="{$vo.art_name}">{$vo.art_name}</a>								
+				</li>
+				{/maccms:art}
+			</ul>	
+		</div>	
+	</div>
+</div>

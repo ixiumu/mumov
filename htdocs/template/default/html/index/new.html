@@ -1,0 +1,47 @@
+<div class="module">
+	<div class="module-heading">
+		<h2 class="module-title">最新影片</h2>
+		<div class="module-tab">
+			<input type="hidden" name="tab" id="tab" class="module-tab-input">
+			<label class="module-tab-name"><span class="module-tab-value">全部</span><i class="icon-arrow-bottom"></i></label>
+			<div class="module-tab-items">
+				<div class="module-tab-title">选择类型<span class="close-drop"><i class="icon-close-o"></i></span></div>
+				<div>
+					<span class="module-tab-item tab-item selected" data-dropdown-value="全部">全部</span>
+					{maccms:type  order="asc" by="sort" ids="parent" flag="vod"}	
+					<span class="module-tab-item tab-item" data-dropdown-value="{$vo.type_name}">{$vo.type_name}</span>
+					{/maccms:type}	
+				</div>
+			</div>
+		</div>
+		<div class="shortcuts-mobile-overlay"></div>
+	</div>
+	<div>
+		<div class="module-list module-line-list tab-list selected">
+			<div class="module-items scroll-box">
+				<div class="scroll-content">
+				{maccms:vod num="16" type="all" order="desc" by="time" }
+			    {include file="public/vodbox"}
+			    {/maccms:vod}
+				</div>
+			</div>
+			<div class="module-footer">
+				<a href="{:mac_url_type($obj,['id'=>1],'show')}" class="load-all" title="更多">查看更多<i class="icon-arrow-right-o"></i></a>
+			</div>
+		</div>
+		{maccms:type  order="asc" by="sort" ids="parent" id="vo1" key="key1"  flag="vod"}	
+		<div class="module-list module-line-list tab-list">
+			<div class="module-items scroll-box">
+				<div class="scroll-content">
+				{maccms:vod num="16" type="'.$vo1['type_id'].'" order="desc" by="time"}  
+	            {include file="public/vodbox"}
+	        	{/maccms:vod}
+				</div>
+			</div>
+			<div class="module-footer">
+				<a href="{:mac_url_type($vo1,[],'type')}" class="load-all" title="查看更多{$vo1.type_name}">更多{$vo1.type_name}<i class="icon-arrow-right-o"></i></a>
+			</div>
+		</div>
+		 {/maccms:type}
+	</div>
+</div>

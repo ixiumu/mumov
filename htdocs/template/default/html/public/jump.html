@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="revisit-after" content="1 days">
+<title>系统提示 - {$maccms.site_name}</title>
+{include file="public/include"}
+</head>
+<body ontouchstart class="tips-sys transfer nfmsg page">
+<main id="main" class="wrapper">
+<div class="content">
+<div class="page-heading">
+<div class="box nfmsg-box">
+<div class="nfmsg-left"></div>
+<div class="nfmsg-right">
+<div class="nfmsg-title">系统提示</div>
+<div class="nfmsg-content">
+{$msg}
+<p><a href="<?php echo($url);?>" class="btn-main btn-base" id="href">跳转 (<b id="wait"><?php echo($wait);?></b>)</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<script type="text/javascript">
+(function(){
+	var wait = document.getElementById('wait'),
+			href = document.getElementById('href').href;
+	var interval = setInterval(function(){
+		var time = --wait.innerHTML;
+		if(time <= 0) {
+			location.href = href;
+			clearInterval(interval);
+		};
+	}, 1000);
+})();
+</script>
+</body>
+</html>

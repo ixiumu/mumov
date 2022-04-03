@@ -1,0 +1,196 @@
+body {
+    background: #16161a;
+    color: hsla(0,0%,100%,.87);
+}
+a{
+    color: hsla(0,0%,100%,.87);
+}
+#header::after{
+     background: #16161a;
+}
+.search-box{
+        background-color: #25252b;
+        box-shadow: 0 0 0 0!important;
+}
+.index-logo{filter: brightness(4);}
+.module-item-text {
+    color: hsla(0,0%,100%,.6);
+}
+.module-item-content{
+      background-color: #16161a;
+}
+
+.module-item-style.video-tag a{
+         background-color: #25252b;
+        color: hsla(0,0%,100%,.6);
+}
+.module-item-style{
+    color: hsla(0,0%,100%,.6);
+}   
+.btn-gray,
+.more,
+.load-all,
+.module-tab-item,
+.page-number{
+     background-color: #25252b;
+    color: hsla(0,0%,100%,.6);   
+}
+.btn-gray:hover,
+.more:hover,
+.load-all:hover,
+.module-tab-item:hover,
+.module-blocklist a:hover,
+.video-info-aux .tag-link:hover,
+.page-number:hover {
+     background-color: #1C1C20;
+}
+.page-current:hover, .page-current{background: #ff2a14;color:#fff;}
+.ac_bg::after, .ac_hot::after, .ac_items::after{ background-color: #25252b;}
+.ac_bg, .ac_hot, .ac_items{background-color: #25252b;}
+.search-tag a{color: hsla(0,0%,100%,.6);}
+.module-tab-item.selected {
+    background: #ff2a14!important;
+}
+.border-top::after, #footer::after, #friendlink::after{
+     background-color: #25252b;
+}
+.library-box::after{ background-color: #32323c;}
+.library-item.selected{background-color: #32323c; color: hsla(0,0%,100%,.6);}
+.library-stat{ color: hsla(0,0%,100%,.6);    }
+#footer{
+    background-color:#16161a;
+    color: hsla(0,0%,100%,.6);    
+}
+.fixed_right_bar{
+    background: rgba(51,51,51,.6);
+}
+.fixed_right_bar div img{
+        filter: brightness(3);
+}
+.drop-content-box{
+            background-color: #25252b;
+}
+.list-item-title strong{
+    color: hsla(0,0%,100%,.6);    
+}
+.drop-tips{
+    color: hsla(0,0%,100%,.6);    
+}
+.icon-clear{
+        color: hsla(0,0%,100%,.6);   
+}
+.drop-content-items::before{border-bottom-color:hsla(0,0%,100%,.6)}
+.nav-menu-item:hover .nav-menu-icon::after {
+	background: #25252b;
+}
+.drop-content-items li a:hover {
+	background-color: #16161a;
+}
+.page #header{
+     background: #16161a;
+}
+.popup{background: #25252b;}
+.popup::after{background:#16161a;}
+.popup-title::after{background:#32323c;}
+.handle-more-drop .block-name{color: hsla(0,0%,100%,.6);}
+.handle-more-drop .block-name strong{color: hsla(0,0%,100%,.6);}
+.handle-more-drop .btn-block-o i{color: hsla(0,0%,100%,.6);}
+#report-popup::after{background:#25252b;}
+.report-content{background:#32323c;}
+
+.block-box-content{color:#000;}
+@media (min-width: 1239px){
+.video-player-handle .drop .drop-content-items::before {
+    border-top: 8px solid #25252b;
+}
+}
+@media (max-width: 559px){
+.view #header {
+    background: 0 0;
+}
+}
+.box{background:#25252b;}
+.video-info-itemtitle{color: hsla(0,0%,100%,.6);}
+.video-info-aux .tag-link:first-child{color:rgba(0, 0, 0, .68)}
+.video-info-aux .tag-link{background:#32323c;color: hsla(0,0%,100%,.6);}
+.view .video-info .page-title{ color: hsla(0,0%,100%,.6);}
+.video-info-aux .tag-link a{ color: hsla(0,0%,100%,.6);}
+.box::before{background: rgba(37, 37, 43, .1)}
+.box::after, .box::before{background: rgba(37, 37, 43, .5)}
+button.share-btn{color:#333;}
+.module-player-list{background:#25252b;}
+.module-blocklist a{background:#32323c;color: hsla(0,0%,100%,.6);}
+.module-player-tab .module-tab-item.selected {
+    background: #32323c!important;
+}
+.video-info-aux .tag-link:first-child{background: #fef0e5;}
+.video-serial {
+    border: 3px solid #32323c;
+    background: #32323c;
+    color: hsla(0,0%,100%,.6);
+}
+.search-stat h2{color: hsla(0,0%,100%,.6);}
+.module-tab-item small{color: hsla(0,0%,100%,.6);}
+.module-search-item{background:#25252b;}
+.nav-search .ac_bg, .nav-search .ac_hot, .nav-search .ac_items, .nav-search .search-focus{background:#25252b;}
+.search #header {
+    margin: 0;
+    background: 0 0;
+}
+.article-content b::after{background: 0 0;}
+.article main::after{background: 0 0;}
+.grid-item i {
+    background: #32323c;
+}
+.grid-more-link{ color: hsla(0,0%,100%,.6);}
+.btn-block-o i{color: hsla(0,0%,100%,.6);}
+.module-row-info:nth-child(odd){background:#32323c;}
+.module-row-title p{color: hsla(0,0%,100%,.6);}
+.module-row-info a{color: hsla(0,0%,100%,.6);}
+@media (max-width: 559px){
+.view .mobile-play .module-item-cover:before {
+    background: linear-gradient(to bottom, rgba(37, 37, 43, 0) 0%, #25252b 100%);
+}
+.module-tab-drop .module-tab-item.selected{color: #fff;}
+.view .mobile-play:before {
+    background: linear-gradient(to bottom, rgba(37, 37, 43, 0) 0%, #25252b 80%, #25252b 100%);
+}    
+.module-player-tab .module-tab-name{background:#25252b;color: hsla(0,0%,100%,.6);}    
+.sort-list .module-tab-name{background:#25252b;}   
+.sort-list .module-tab-name i{color: hsla(0,0%,100%,.6);}
+.video-subtitle{color: hsla(0,0%,100%,.6);}
+.module-tab .module-tab-items{background:#25252b;}
+.module-sorttab .module-blocklist a{ background: #32323c;}
+.sort-list .sort-button{color: hsla(0,0%,100%,.6);}
+.sort-list .sort-button:before, .sort-list .sort-button:after{background: rgba(37, 37, 43, .62);}
+.module-tab-drop .module-tab-item{background: #32323c;color: hsla(0,0%,100%,.6);}
+.module-sorttab .module-blocklist a:hover {background: #16161a;}
+.play #header{background:#000;}
+.mobile-open .search-box, .mobile-open #search-content .search-box{ background:#25252b;}
+.mobile-open .search-box .search-btn, .mobile-open .search-box .cancel-btn, .mobile-open .search-box .search-input{background: #32323c;}
+}
+@media (max-width: 1239px){
+.player-box-side, .player-info {
+    background: #16161a;
+}
+}
+@media (max-width: 899px){
+.module-bg {
+    background: 0 0;
+}
+  .play #header{background:#000;}  
+}
+.bottom-line:after{ border-bottom: 1px solid #25252b!important;}
+.form-control{border: 1px solid #32323c!important;background: #25252b!important;}
+.btn-default{border: 1px solid #25252b!important;background:#25252b!important;color: hsla(0,0%,100%,.6)!important;}
+.btn-primary{color: hsla(0,0%,100%,.6)!important;}
+.nav-head > li.active > a, .nav-tabs > li.active > a {
+    border-bottom: 2px solid #32323c!important;
+   color: hsla(0,0%,100%,.6)!important;
+}
+.top-line-dot:before{ border-top: 1px solid #25252b!important;}
+.mxone-vodlist__text.striped .striped-head, .mxone-vodlist__text.to-color li:nth-of-type(odd) {
+    background-color: #25252c!important;
+}
+.top-line:before{ border-top: 1px solid #25252b!important;}
+.mobile-open .search-box .cancel-btn{background:none!important;}

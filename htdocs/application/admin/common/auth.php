@@ -152,7 +152,7 @@ return array(
         '123' => array("show"=>1,'name' => lang('menu/website_data_lock'), 'controller' => 'website',		'action' => 'data','param'=>'lock=1'),
         '124' => array("show"=>1,'name' => lang('menu/website_data_audit'), 'controller' => 'website',		'action' => 'data','param'=>'status=0'),
         '129' => array("show"=>1,'name' => lang('menu/website_batch'), 'controller' => 'website',		'action' => 'batch'),
-        '1291' => array("show"=>1,'name' => lang('menu/website_repeat'), 'controller' => 'website',		'action' => 'data', 'param'=>'repeat=1'),
+        // '1291' => array("show"=>1,'name' => lang('menu/website_repeat'), 'controller' => 'website',		'action' => 'data', 'param'=>'repeat=1'),
     )),
 
     '6' => array('name' => lang('menu/users'), 'icon' => 'xe62c', 'sub' => array(
@@ -243,22 +243,22 @@ return array(
     )),
 
     '10' => array('name' => lang('menu/db'), 'icon' => 'xe621', 'sub' => array(
-        '101' => array("show"=>1,'name' => lang('menu/database'), 'controller' => 'database',		'action' => 'index'),
-        '10001' => array("show"=>0,'name' => '--数据库备份', 'controller' => 'database',		'action' => 'export'),
-        '10002' => array("show"=>0,'name' => '--数据库还原', 'controller' => 'database',		'action' => 'import'),
-        '10003' => array("show"=>0,'name' => '--数据库优化', 'controller' => 'database',		'action' => 'optimize'),
-        '10004' => array("show"=>0,'name' => '--数据库修复', 'controller' => 'database',		'action' => 'repair'),
-        '10005' => array("show"=>0,'name' => '--数据库删除备份', 'controller' => 'database',		'action' => 'del'),
-        '10006' => array("show"=>0,'name' => '--数据库表信息', 'controller' => 'database',		'action' => 'columns'),
+        // '101' => array("show"=>1,'name' => lang('menu/database'), 'controller' => 'database',		'action' => 'index'),
+        // '10001' => array("show"=>0,'name' => '--数据库备份', 'controller' => 'database',		'action' => 'export'),
+        // '10002' => array("show"=>0,'name' => '--数据库还原', 'controller' => 'database',		'action' => 'import'),
+        // '10003' => array("show"=>0,'name' => '--数据库优化', 'controller' => 'database',		'action' => 'optimize'),
+        // '10004' => array("show"=>0,'name' => '--数据库修复', 'controller' => 'database',		'action' => 'repair'),
+        // '10005' => array("show"=>0,'name' => '--数据库删除备份', 'controller' => 'database',		'action' => 'del'),
+        // '10006' => array("show"=>0,'name' => '--数据库表信息', 'controller' => 'database',		'action' => 'columns'),
 
         '102' => array("show"=>1,'name' => lang('menu/database_sql'), 'controller' => 'database',		'action' => 'sql'),
-        '103' => array("show"=>1,'name' => lang('menu/database_rep'), 'controller' => 'database',		'action' => 'rep'),
+        // '103' => array("show"=>1,'name' => lang('menu/database_rep'), 'controller' => 'database',		'action' => 'rep'),
     )),
     '11' => array('name' => lang('menu/apps'), 'icon' => 'xe621', 'sub' => array(
-        '111' => array("show"=>1,'name' => lang('menu/addon'), 'controller' => 'addon',		'action' => 'index', 'param'=>''),
+        // '111' => array("show"=>1,'name' => lang('menu/addon'), 'controller' => 'addon',		'action' => 'index', 'param'=>''),
         '112' => array("show"=>1,'name' => lang('menu/urlsend'), 'controller' => 'urlsend',		'action' => 'index', 'param'=>''),
         '113' => array("show"=>1,'name' => lang('menu/safety_file'), 'controller' => 'safety',		'action' => 'file', 'param'=>''),
-        '114' => array("show"=>1,'name' => lang('menu/safety_data'), 'controller' => 'safety',		'action' => 'data', 'param'=>''),
+        // '114' => array("show"=>1,'name' => lang('menu/safety_data'), 'controller' => 'safety',		'action' => 'data', 'param'=>''),
         '11200' => array("show"=>0,'name' => '--推送入口', 'controller' => 'urlsend',		'action' => 'push'),
         '11201' => array("show"=>0,'name' => '--百度主动推送', 'controller' => 'urlsend',		'action' => 'baidu_push'),
         '11202' => array("show"=>0,'name' => '--百度熊掌推送', 'controller' => 'urlsend',		'action' => 'baidu_bear'),

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>找回密码 - {$maccms.site_name} </title>
+	<meta name="keywords" content="{$maccms.site_keywords}"/>
+	<meta name="description" content="{$maccms.site_description}"/>
+	{include file="public/include"}
+	{include file="user/include"}
+</head>
+<body class="page padding-0">
+ 	{include file="public/head"}   
+<div class="mxone_login__form clearfix">
+	<div class="mxone-pannel mxone-pannel-bg clearfix">
+		<div class="mxone-pannel-box clearfix">		
+			<div class="mxone-pannel_bd">
+				<div class="head">
+					<h4 class="margin-0">预留问题找回密码</h4>
+				</div>
+				<ul class="input-list">				
+					<form method="post" id="fm" action="">					
+						<li>
+							<input type="text" id="user_name" name="user_name" class="form-control" placeholder="请输入您的登录账号">
+						</li>
+						<li>
+							<input type="text" id="user_question" name="user_question" class="form-control" placeholder="请输入您密码找回问题">
+						</li>
+						<li>
+							<input type="text" id="user_answer" name="user_answer" class="form-control" placeholder="请输入您的密码找回答案">
+						</li>
+						<li>
+							<input type="password" id="user_pwd" name="user_pwd" class="form-control" placeholder="请输入您的新密码">
+						</li>
+						<li>
+							<input type="password" id="user_pwd2" name="user_pwd2" class="form-control" placeholder="请输入您的确认密码">
+						</li>
+						<li>
+							<button type="button" id="btn_submit" class="btn btn-lg btn-block btn-primary">立即登录</button>
+						</li>
+						<li class="text-center">
+							<a href="{:url('user/login')}">登录账号</a><span class="split-line"></span><a href="{:url('user/findpass_msg')}?ac=email">用邮箱找回</a><span class="split-line"></span><a href="{:url('user/findpass_msg')}?ac=phone">用手机找回</a>
+						</li>
+					</form>
+				</ul>			
+			</div>
+		</div>
+	</div>
+</div>
+ 	{include file="public/foot"}  
+<script type="text/javascript">
+
+	$(function(){
+		$("body").bind('keyup',function(event) {
+			if(event.keyCode==13){ $('#btn_submit').click(); }
+		});
+		$('#btn_submit').click(function() {
+			if ($('#user_name').val()  == '') { layer.msg('请输入用户！'); $("#user_name").focus(); return false; }
+			if ($('#user_pwd').val()  == '') { layer.msg('请输入密码！'); $("#user_pwd").focus(); return false; }
+			if ($('#verify').val()  == '') { layer.msg('请输入验证码！'); $("#verify").focus(); return false; }
+
+			$.ajax({
+				url: "{:url('user/findpass')}",
+				type: "post",
+				dataType: "json",
+				data: $('#fm').serialize(),
+				beforeSend: function () {
+					$("#btn_submit").css("background","#fd6a6a").val("loading...");
+				},
+				success: function (r) {
+					if(r.code==1){
+						location.href="{:url('user/index')}";
+					}
+					else{
+						layer.msg(r.msg);
+					}
+				},
+				complete: function () {
+					$('#verify').click();
+					$("#btn_submit").css("background","#fa4646").val("立即找回");
+				}
+			});
+
+		});
+	});
+
+</script>
+
+</body>
+</html>

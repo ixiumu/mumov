@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>会员中心 - {$maccms.site_name}</title>
+	<meta name="keywords" content="会员中心">
+	<meta name="description" content="会员中心">
+	{include file="public/include"}
+	{include file="user/include"}
+</head>
+<body class="page">
+{include file="public/head"}
+<div class="container">
+    <div class="row">   	
+    	<div class="col-md-wide-25 col-sm-wide-35 col-xs-1 padding-0">
+    		{include file="user/head"}						
+    	</div>
+    	<div class="col-md-wide-75 col-sm-wide-65 col-xs-1 mxone-pannel-side hidden-xs" style="padding: 0 0 0 20px;">   		
+    		<div class="mxone-pannel mxone-pannel-bg clearfix">
+				<div class="mxone-pannel-box clearfix">
+					<div class="mxone-pannel_hd">
+						<div class="mxone-pannel__head active bottom-line clearfix">
+							<h3 class="title">	我的资料</h3>
+							<ul class="navuser nav-tabs pull-right">
+								<li class="active"><a href="">基本资料</a></li>
+								<li><a href="{:url('user/info')}">修改信息</a></li>
+								<li><a href="{:url('user/popedom')}">我的权限</a></li>
+							</ul>
+						</div>																		
+					</div>
+					<div class="mxone-pannel_bd clearfix">
+						<ul class="mxone-user__form col-pd clearfix">
+							<p><span class="xiang">用户名：</span>{$obj.user_name}</p>
+							<p class="top-line-dot"><span class="xiang">QQ号码：</span>{$obj.user_qq|mac_default='未填写'}</p>
+							<p class="top-line-dot"><span class="xiang">Email地址：</span>{$obj.user_email}</p>
+							<p class="top-line-dot"><span class="xiang">注册时间：</span>{$obj.user_reg_time|mac_day}</p>
+							<p class="top-line-dot"><span class="xiang">登陆IP：</span>{$obj.user_login_ip|long2ip}</p>
+							<p class="top-line-dot"><span class="xiang">登陆时间：</span>{$obj.user_login_time|mac_day}</p>
+							<p class="top-line-dot hidden-sm"><span class="xiang">推广链接：</span><a class="urlcopy" href="javascript:;" data-clipboard-text="http://{$maccms.site_url}{:mac_url('user/reg')}?uid={$obj.user_id}">http://{$maccms.site_url}{:mac_url('user/reg')}?uid={$obj.user_id}</a>
+							</p>
+						</ul>																							
+					</div>		
+				</div>
+			</div>	
+			<!-- D083 by v.shoutu.cn -->
+			<div class="mxone-pannel mxone-pannel-bg clearfix">	
+				<div class="mxone-pannel-box">
+					<div class="mxone-pannel_hd">
+						<div class="mxone-pannel__head clearfix">
+							<h3 class="title">热门影片</h3>
+						</div>
+					</div>
+					
+					<div class="mxone-pannel_bd">
+					<div class="module-list module-lines-list">
+	            	<div class="module-items">
+	                {maccms:vod num="6" type="all" order="desc" by="hts"}  
+	                {include file="public/vodbox"}
+	            	{/maccms:vod}
+	            	</div>
+                	</div>												
+					</div>
+				</div>
+			</div>
+    	</div>
+    </div>
+</div>
+
+{include file="public/foot"}
+</body>
+</html>

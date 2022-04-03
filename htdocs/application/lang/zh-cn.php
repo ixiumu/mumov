@@ -768,7 +768,7 @@ https://www.baidu.com/123.jpg
     'admin/index/login/verify_pass'=>'请输入密码',
     'admin/index/login/verify_verify'=>'请输入验证码',
 
-    'admin/index/index/name' =>'超级控制台',
+    'admin/index/index/name' =>'管理后台',
     'admin/index/index/menu_switch' =>'打开/关闭左侧导航',
     'admin/index/index/menu_index' =>'网站首页',
     'admin/index/index/menu_lock' =>'锁屏操作',

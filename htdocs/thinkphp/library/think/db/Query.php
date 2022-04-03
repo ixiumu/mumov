@@ -2261,6 +2261,9 @@ class Query
     {
         // 分析查询表达式
         $options = $this->parseExpress();
+        // 修复 SQLite
+        $id = str_replace('mac_', '', $options['table']) . '_id';
+        if (isset($data[$id])) unset($data[$id]);
         $data    = array_merge($options['data'], $data);
         // 生成SQL语句
         $sql = $this->builder->insert($data, $options, $replace);

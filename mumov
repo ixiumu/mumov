@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ ! -f "/data/sqlite3.db" ]; then
+  cp /opt/data/sqlite3.db /data
+  cp -r -u /opt/data/upload /data
+  cp -r -u /opt/data/sqlite3.db /data
+  cp -r -u /opt/data/extra /data
+  cp -r -u /opt/data/player /data
+fi
+
+php -S 0.0.0.0:8088
