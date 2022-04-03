@@ -17,7 +17,7 @@ return array (
   ),
   'site' => 
   array (
-    'site_name' => '电影先生',
+    'site_name' => 'MuMOV 影院',
     'site_url' => '127.0.0.1',
     'site_wapurl' => '',
     'site_keywords' => '',
@@ -646,6 +646,12 @@ plotdetail/<id>   => plot/detail',
       'name' => '剧情首页',
       'key' => '剧情连载,剧情更新,剧情前瞻,剧情完结',
       'des' => '提供最新的剧情信息',
+    ),
+    'website' => 
+    array (
+      'name' => 'MuMOV - 私人影院',
+      'key' => '',
+      'des' => '',
     ),
   ),
   'urlsend' => 

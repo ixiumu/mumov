@@ -8,4 +8,4 @@ if [ ! -f "/data/sqlite3.db" ]; then
   cp -r -u /opt/data/player /data
 fi
 
-php -S 0.0.0.0:8088
+php -S 0.0.0.0:8088 >/dev/null 2>&1
